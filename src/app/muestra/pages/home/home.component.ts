@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,27 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HomeComponent implements OnInit {
+  
+
+  
+  
+  idCat:string="";
+  
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+  asignarNum(id:string){
+  this.idCat=id;
+  
+    
+    console.log('home',this.idCat);
+   
+   
+  }
+  }
+  
 
-}

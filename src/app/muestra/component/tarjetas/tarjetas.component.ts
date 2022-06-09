@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-tarjetas',
   templateUrl: './tarjetas.component.html',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetasComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit(): void {
+   
   }
+
 
 }

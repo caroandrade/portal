@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MuestraService } from 'src/app/muestra/services/muestra.service';
+import { Post } from '../interfaces/wordPress.interfaces';
 
 interface MenuItem{
   ruta    :string;
@@ -21,8 +23,11 @@ interface MenuItem{
   ]
 })
 export class MenuComponent implements OnInit {
+  post: Post[]=[];
 
-  constructor() { }
+ 
+
+  constructor(private novedades: MuestraService) { }
 
   ngOnInit(): void {
   }
@@ -34,7 +39,21 @@ export class MenuComponent implements OnInit {
     {
       ruta:'/muestra/etiquetas',
       nombre: 'Etiquetas'
-    }
+    },
+     {
+       ruta:'/muestra/home',
+      nombre: 'home'
+     }
+    // {
+    //   ruta:'/muestra/post',
+    //   nombre: 'Post'
+    // }
    
   ]
+
+
 }
+  
+   
+  
+
